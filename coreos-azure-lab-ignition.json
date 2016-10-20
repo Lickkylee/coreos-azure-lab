@@ -234,7 +234,7 @@
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true,
-            "storageUri": "[concat('http://', parameters('newStorageAccountName'), '.blob.core.windows.net')]"
+            "storageUri": "[concat('http://', parameters('newStorageAccountName'), '.blob.core.chinacloudapi.cn')]"
           }
         },
         "osProfile": {
@@ -263,7 +263,7 @@
           "osDisk": {
             "name": "[concat(variables('vmEtcdNamePrefix'), copyindex())]",
             "vhd": {
-              "uri": "[concat('http://',parameters('newStorageAccountName'),'.blob.core.windows.net/vhds/',variables('vmEtcdNamePrefix'), copyindex(),'.vhd')]"
+              "uri": "[concat('http://',parameters('newStorageAccountName'),'.blob.core.chinacloudapi.cn/vhds/',variables('vmEtcdNamePrefix'), copyindex(),'.vhd')]"
             },
             "caching": "ReadWrite",
             "createOption": "FromImage"
@@ -299,7 +299,7 @@
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true,
-            "storageUri": "[concat('http://', parameters('newStorageAccountName'), '.blob.core.windows.net')]"
+            "storageUri": "[concat('http://', parameters('newStorageAccountName'), '.blob.core.chinacloudapi.cn')]"
           }
         },
         "osProfile": {
@@ -328,7 +328,7 @@
           "osDisk": {
             "name": "[concat(variables('vmHostNamePrefix'), copyindex())]",
             "vhd": {
-              "uri": "[concat('http://',parameters('newStorageAccountName'),'.blob.core.windows.net/vhds/',variables('vmHostNamePrefix'), copyindex(),'.vhd')]"
+              "uri": "[concat('http://',parameters('newStorageAccountName'),'.blob.core.chinacloudapi.cn/vhds/',variables('vmHostNamePrefix'), copyindex(),'.vhd')]"
             },
             "caching": "ReadWrite",
             "createOption": "FromImage"
