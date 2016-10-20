@@ -60,9 +60,11 @@ Once Pageant starts up it will create a system tray icon of a computer with a ha
 
 ### Download and deploy the Azure Resource Manager deployment template
 
-The Azure Resource Manager deployment templates for this lab are located in this GitHub repository.  There are two that implement the same functionality: [coreos-azure-lab-ignition.json](https://raw.githubusercontent.com/omkensey/coreos-azure-lab/master/coreos-azure-lab-ignition.json), and [coreos-azure-lab-cloud-config.json](https://raw.githubusercontent.com/omkensey/coreos-azure-lab/master/coreos-azure-lab-cloud-config.json).  Both of these templates set up an etcd cluster, with a separate set of hosts that will run etcd proxies to the cluster.
+The Azure Resource Manager deployment templates for this lab are located in this GitHub repository.  There are two that implement the same functionality: [coreos-azure-lab-ignition.json](https://raw.githubusercontent.com/Lickkylee/coreos-azure-lab/master/coreos-azure-lab-ignition.json), and [coreos-azure-lab-cloud-config.json](https://raw.githubusercontent.com/Lickkylee/coreos-azure-lab/master/coreos-azure-lab-cloud-config.json).  Both of these templates set up an etcd cluster, with a separate set of hosts that will run etcd proxies to the cluster.
 
 When you deploy the template, the required options with no defaults are the storage account name, SSH public key (in OpenSSH format, e.g. "ssh-rsa AAAA.....") and discovery URL that you created earlier.  There is also an option for the etcd cluster size, which should match the size you specified when creating the discovery URL, and an option for the number of container hosts to start (for this lab, you will want at least two to really demonstrate the concepts, and the exercises are written to assume two hosts named **host0** and **host1**, but most steps of the exercises can be done with only one).
+
+<a href="https://portal.azure.cn/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/Lickkylee/coreos-azure-lab/master/coreos-azure-lab-cloud-config.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
 
 After the notice that deployment was successful, use the SSH client on your OS to log in to your instances:
 
