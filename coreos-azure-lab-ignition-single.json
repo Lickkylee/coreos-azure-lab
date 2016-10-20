@@ -131,7 +131,7 @@
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true,
-            "storageUri": "[concat('http://', parameters('newStorageAccountName'), '.blob.core.windows.net')]"
+            "storageUri": "[concat('http://', parameters('newStorageAccountName'), '.blob.core.chinacloudapi.cn')]"
           }
         },
         "osProfile": {
@@ -160,7 +160,7 @@
           "osDisk": {
             "name": "[parameters('vmHostName')]",
             "vhd": {
-              "uri": "[concat('http://',parameters('newStorageAccountName'),'.blob.core.windows.net/vhds/',parameters('vmHostName'),'.vhd')]"
+              "uri": "[concat('http://',parameters('newStorageAccountName'),'.blob.core.chinacloudapi.cn/vhds/',parameters('vmHostName'),'.vhd')]"
             },
             "caching": "ReadWrite",
             "createOption": "FromImage"
